@@ -29,9 +29,22 @@ var parsedtask = JSON.parse(localStorage.getItem('setTask'));
 
 function TableRenderFunc(){
 var table = document.getElementById('tableId')
-var td = document.createElement('td')
-table.appendChild(td)
-td.textContent = 
+var tr = document.createElement('tr')
+var td1 = document.createElement('td')
+var td2 = document.createElement('td')
+var td3 = document.createElement('td')
+var td4 = document.createElement('td')
+
+tr.appendChild(td1)
+tr.appendChild(td2)
+tr.appendChild(td3)
+tr.appendChild(td4)
+
+table.appendChild(tr)
+td1.textContent = TaskCnst.tasks
+td2.textContent = TaskCnst.date
+td3.textContent = TaskCnst.urgency
+td4.textContent = TaskCnst.done
 
 }
 
@@ -39,7 +52,7 @@ function TaskCnst( tasks , date , urgency) {
 this.tasks
 this.date
 this.urgency
-
+taskArray.push(this)
 }
 TaskCnst.prototype.setTask = function (){
     this.tasks = event.target.task.value;
