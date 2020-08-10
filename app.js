@@ -31,6 +31,8 @@ function TableRenderFunc(){
 var table = document.getElementById('tableId')
 var td = document.createElement('td')
 table.appendChild(td)
+td.textContent = 
+
 }
 
 function TaskCnst( tasks , date , urgency) {
