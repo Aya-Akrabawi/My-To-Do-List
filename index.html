@@ -26,20 +26,25 @@
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
               </select>
+              <button type="submit">submit</button>
         </form>
-        <button type="submit">submit</button>
+        
         </aside>
         <aside id="tableAside">
-        <table id="tableId">
-            <tr>
+        <table id="tableId1">
+            
+            <thead>
                 <th>Task</th>
                 <th>Date</th>
                 <th id="thUrcency">Urgency</th>
-                <th>Done</th>
-            </tr>
+                <th id="clearDone">Done</th>
+            </thead>
+            <tbody id="tableId"></tbody>
+            <!-- <table id="tableId"></table> -->
+            <button id="deletedata" type="submit">Clear All Data</button>
         </table>
-        <button id="clearButton" type="reset">Clear All Data</button>
         </aside>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>

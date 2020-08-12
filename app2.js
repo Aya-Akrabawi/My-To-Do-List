@@ -1,5 +1,6 @@
 'use strict'
 var taskArray;
+console.log(taskArray)
 function TaskCnst( tasks , date , urgency ) {
     this.tasks = tasks
     this.date = date
@@ -7,17 +8,17 @@ function TaskCnst( tasks , date , urgency ) {
     taskArray = this
     }
     
-    
 
-    // if (localStorage.getItem("setTask") !== null) {
-        // var parsedtask = JSON.parse(localStorage.getItem('setTask'));
-    // }
+    if (localStorage.getItem("setTask") !== null) {
+        var parsedtask = JSON.parse(localStorage.getItem('setTask'));
+    }
        
 var formTag = document.getElementById('formTag')
 formTag.addEventListener('submit', submitionFunc );
 
 function submitionFunc() {
     event.preventDefault();
+
 
     var tasks = event.target.task.value;
         var date = event.target.date.value;
@@ -40,9 +41,20 @@ function submitionFunc() {
 
 function TableRenderFunc(){
 var table = document.getElementById('tableId')
-    var tr = document.createElement('tr')
-    tr.setAttribute('id','tr1')
+// var tr = document.createElement('tr')
+// var td1 = document.createElement('td')
+// var td2 = document.createElement('td')
+// var td3 = document.createElement('td')
+// var td4 = document.createElement('td')
 
+
+// tr.appendChild(td2)
+// tr.appendChild(td3)
+// tr.appendChild(td4)
+
+// table.appendChild(tr)
+// for (let index = 0; index < taskArray.length; index++) {
+    var tr = document.createElement('tr')
     table.appendChild(tr)
 
     var td1 = document.createElement('td')
@@ -55,29 +67,9 @@ var table = document.getElementById('tableId')
     tr.appendChild(td3)
     td3.textContent = taskArray.urgency
 
-    var td4 = document.createElement('td')
-    td4.setAttribute('id','rowDelete')
-    td4.textContent = "X"
-    tr.appendChild(td4)
-}
 
-var clearButton = document.getElementById('deletedata')
-clearButton.addEventListener('click', clearButtonFunc );
-
-function clearButtonFunc() {
-    event.preventDefault();
-    console.log('helloo')
-    var myobj = document.getElementById("tableId");
-myobj.textContent = '';
-
-}
-
-// var clearRow = document.getElementById('rowDelete')
-// clearRow.addEventListener('click', doneXFunc );
-// function doneXFunc() {
-//     event.preventDefault();
-//     console.log('helloo')
-
-//     document.getElementById("tableId1").deleteRow(0);
-    
 // }
+
+
+
+}
